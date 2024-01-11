@@ -5,7 +5,12 @@ import {
   NodeICO,
   WordpressICO,
   JqueryICO,
+  VuelICO,
+  MysqlICO,
+  TypescriptICO,
+  PrismaICO,
 } from "../Helpers/Icons";
+import { SiExpress } from "react-icons/si";
 
 const projetos = {
   projects: [
@@ -34,6 +39,22 @@ const projetos = {
         <JqueryICO key={JqueryICO} />,
       ],
       liveVersion: "https://thetechhub.com.br/",
+    },
+    {
+      id: 3,
+      src: "/Inspired.jpeg",
+      name: "Inspired",
+      description:
+        "E-commerce como projeto de estudo como forma de aprimorar as minhas habilidades.",
+      technologies: [
+        <VuelICO key={VuelICO} />,
+        <NodeICO key={NodeICO} />,
+        <MysqlICO key={MysqlICO} />,
+        <SiExpress key={MysqlICO} />,
+        <TypescriptICO key={TypescriptICO} />,
+        <PrismaICO key={PrismaICO} />,
+      ],
+      liveVersion: "https://github.com/Raphaeljsx/inspired",
     },
   ],
 };

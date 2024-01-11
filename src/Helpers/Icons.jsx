@@ -17,6 +17,8 @@ import { FaCss3Alt } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { FaCode } from "react-icons/fa";
 import { DiJqueryLogo } from "react-icons/di";
+import { SiTypescript } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
 
 export const DarkModeICO = () => <BsFillMoonStarsFill />;
 export const LinkedinICO = () => <AiFillLinkedin />;
@@ -38,6 +40,10 @@ export const CssICO = () => <FaCss3Alt />;
 export const TailwindICO = () => <SiTailwindcss />;
 export const CurlyICO = ({ className }) => <FaCode className={className} />;
 export const JqueryICO = () => <DiJqueryLogo />;
+export const TypescriptICO = () => <SiTypescript />;
+export const PrismaICO = () => {
+  <SiPrisma />;
+};
 
 TerminalICO.propTypes = {
   className: PropTypes.text || PropTypes.func,
