@@ -32,7 +32,7 @@ const Header = ({ onClick }) => {
           OLÁ, MEU NOME É <br className="md:hidden" /> RAPHAEL ALVES DE
           OLIVEIRA!
         </h3>
-        <h1 className="text-3xl lg:text-4xl xl:text-5xl py-2 text-teal-600 font-bold">
+        <h1 className="text-2xl lg:text-4xl xl:text-5xl py-2 text-teal-600 font-bold">
           <Typewriter text="  Desenvolvedor Full-Stack" />
         </h1>
 
@@ -61,7 +61,7 @@ const Header = ({ onClick }) => {
             <GithubICO />
           </a>
         </div>
-        <div className="relative mx-auto w-60 h-60 mt-20 animate-blink">
+        <div className="relative mx-auto w-60 h-60 mt-10 md:mt-20 animate-blink">
           <img
             className="rounded-full overflow-hidden"
             src={photo}
