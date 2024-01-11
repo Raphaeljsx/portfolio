@@ -18,7 +18,7 @@ const About = () => {
   return (
     <section>
       <div className="mt-10">
-        <div className="grid grid-cols-1 justify-center items-center md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 justify-center items-center lg:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold py-2 dark:text-white">
               SOBRE MIM
@@ -31,7 +31,7 @@ const About = () => {
               Wordpress.
             </p>
           </div>
-          <div className="h-full flex hidden justify-center items-center  md:flex">
+          <div className="h-full flex hidden justify-center items-center  lg:flex">
             <div className="h-60 dark:bg-white w-0.5 bg-gray-950"></div>
           </div>
           <div>

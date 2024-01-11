@@ -29,13 +29,14 @@ const Header = ({ onClick }) => {
       </nav>
       <div className="text-center md:p-10">
         <h3 className="text-lg dark:text-white">
-          OLÁ, MEU NOME É RAPHAEL ALVES DE OLIVEIRA!
+          OLÁ, MEU NOME É <br className="md:hidden" /> RAPHAEL ALVES DE
+          OLIVEIRA!
         </h3>
-        <h1 className="text-3xl md:text-5xl py-2 text-teal-600 font-bold">
+        <h1 className="text-3xl lg:text-4xl xl:text-5xl py-2 text-teal-600 font-bold">
           <Typewriter text="  Desenvolvedor Full-Stack" />
         </h1>
-        <h3 className="text-2xl py-2 dark:text-white"></h3>
-        <p className="text-md py-5 leading-8 text-gray-800 dark:text-white animate-animeLeft">
+
+        <p className="text-md py-5 leading-6 md:leading-8 text-gray-800 dark:text-white animate-animeLeft">
           Sou um desenvolvedor apaixonado por criar soluções tecnológicas
           inovadoras. <br className="hidden md:block" /> Tenho um forte
           background em programação web e estou constantemente aprendendo e
