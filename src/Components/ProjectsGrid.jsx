@@ -67,27 +67,38 @@ const ProjectsGrid = () => {
           key={projeto.id}
           className="rounded-lg border dark:border-slate-700  dark:bg-card text-card-foreground shadow-sm group overflow-hidden transition-transform duration-200 ease-in-out transform hover:scale-105"
         >
-          <img className="w-full h-48 object-cover" src={projeto.src} alt={projeto.name} />
+          <a
+              href={projeto.liveVersion}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <img className="w-full h-48 object-cover" src={projeto.src} alt={projeto.name} />
+            </a>
+          
          <div className="p-4">
          
           <h3 className="tracking-tight text-lg font-bold">{projeto.name}</h3>
-          <p className="text-sm dark:text-gray-400">{projeto.description}</p>
+          <p className="text-sm dark:text-gray-400 mb-5">{projeto.description}</p>
     
-          <div className="flex justify-between items-center mt-4">
+          <div className="flex flex-col-reverse md:flex-row md:justify-between   items-center mt-4">
             <a
               href={projeto.liveVersion}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 self-start"
+              className=" self-start"
             >
               <button
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium 
+                ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 
+                focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground 
+                hover:bg-primary/90 h-10 px-4 py-2 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               >
                 Ver projeto
               </button>
             </a>
-            <div className="flex space-x-2 text-2xl">
-          {projeto.technologies}
+            <div className="flex self-start md:self-center space-x-2 text-2xl">
+            {projeto.technologies}
           </div>
           </div>
           
