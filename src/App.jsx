@@ -5,7 +5,7 @@ import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 
 function App() {
-  const [darkmode, setDarkMode] = useState(false);
+  const [darkmode, setDarkMode] = useState(true);
 
   function darkMode() {
     setDarkMode(!darkmode);
@@ -13,14 +13,15 @@ function App() {
 
   return (
     <div className={darkmode ? "dark" : ""}>
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <section className="min-h-screen">
-          <Header onClick={darkMode} />
-        </section>
-        <About />
-        <Projects />
-      </main>
-      <Footer />
+      <div className="bg-white dark:bg-darker">
+      <Header onClick={darkMode} />
+        <div className="mx-auto max-w-screen-xl p-4">
+     
+          <About />
+          <Projects />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }

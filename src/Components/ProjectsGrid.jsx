@@ -17,7 +17,7 @@ const projetos = {
     {
       id: 1,
       src: "/log.jpg",
-      name: "Dogs - Uma Rede Social para Cachorros",
+      name: "Dogs - Uma Rede Social",
       description:
         "Desenvolvi uma rede social para cachorros no curso de React que fiz no site da Origamid.",
       technologies: [
@@ -61,29 +61,37 @@ const projetos = {
 
 const ProjectsGrid = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 justify-center align-center dark:text-white mt-10 pb-20 md:pb-40">
+    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 dark:text-white">
       {projetos.projects.map((projeto) => (
         <div
           key={projeto.id}
-          className="flex flex-col justify-center p-4 shadow-md"
+          className="rounded-lg border dark:border-slate-700  dark:bg-card text-card-foreground shadow-sm group overflow-hidden transition-transform duration-200 ease-in-out transform hover:scale-105"
         >
-          <img src={projeto.src} alt={projeto.name} />
-          <h3 className="font-bold mt-4 text-xl">{projeto.name}</h3>
-          <p className="my-4">{projeto.description}</p>
-          <div className="flex gap-3 text-3xl">{projeto.technologies}</div>
-          <a
-            href={projeto.liveVersion}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 self-start"
-          >
-            <button
-              className="bg-teal-600 px-5 py-3 rounded-md text-white font-medium dark:text-black hover:bg-teal-700 dark:bg-white 
-            dark:hover:bg-teal-600 dark:hover:text-white"
+          <img className="w-full h-48 object-cover" src={projeto.src} alt={projeto.name} />
+         <div className="p-4">
+         
+          <h3 className="tracking-tight text-lg font-bold">{projeto.name}</h3>
+          <p className="text-sm dark:text-gray-400">{projeto.description}</p>
+    
+          <div className="flex justify-between items-center mt-4">
+            <a
+              href={projeto.liveVersion}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 self-start"
             >
-              VER PROJETO
-            </button>
-          </a>
+              <button
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              >
+                Ver projeto
+              </button>
+            </a>
+            <div className="flex space-x-2 text-2xl">
+          {projeto.technologies}
+          </div>
+          </div>
+          
+         </div>
         </div>
       ))}
     </div>

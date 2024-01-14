@@ -1,4 +1,5 @@
-import { BsFillMoonStarsFill } from "react-icons/bs";
+
+import { LuSunMedium } from "react-icons/lu";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import PropTypes from "prop-types";
 
@@ -17,10 +18,15 @@ import { FaCss3Alt } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { FaCode } from "react-icons/fa";
 import { DiJqueryLogo } from "react-icons/di";
+import { TbCodeDots } from "react-icons/tb";
+import { FaTerminal } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 
-export const DarkModeICO = () => <BsFillMoonStarsFill />;
+
+export const FaTerminalIcon2 = () => <FaTerminal/>
+export const CodeIcon2 = () => <TbCodeDots/>
+export const DarkModeICO = () => <LuSunMedium />;
 export const LinkedinICO = () => <AiFillLinkedin />;
 export const GithubICO = () => <AiFillGithub />;
 export const TerminalICO = ({ className }) => (
@@ -44,6 +50,7 @@ export const TypescriptICO = () => <SiTypescript />;
 export const PrismaICO = () => {
   <SiPrisma />;
 };
+
 
 TerminalICO.propTypes = {
   className: PropTypes.text || PropTypes.func,

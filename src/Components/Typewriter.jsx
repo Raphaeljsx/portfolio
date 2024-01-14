@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Typewriter = ({ text, speed }) => {
   const displayText = useTypewriter(text, speed);
-  return <div>{displayText}</div>;
+  return <>{displayText}</>;
 };
 
 export default Typewriter;
