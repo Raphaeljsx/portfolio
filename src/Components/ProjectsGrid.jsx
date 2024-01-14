@@ -86,7 +86,7 @@ const ProjectsGrid = () => {
               href={projeto.liveVersion}
               target="_blank"
               rel="noopener noreferrer"
-              className=" self-start"
+              className=" self-start mt-5 md:mt-0"
             >
               <button
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium 
