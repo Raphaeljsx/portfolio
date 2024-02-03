@@ -16,19 +16,6 @@ const projetos = {
   projects: [
     {
       id: 1,
-      src: "/log.jpg",
-      name: "Dogs - Uma Rede Social",
-      description:
-        "Desenvolvi uma rede social para cachorros no curso de React que fiz no site da Origamid.",
-      technologies: [
-        <ReactICO key={ReactICO} />,
-        <LogoJavascriptICO key={LogoJavascriptICO} />,
-        <NodeICO key={NodeICO} />,
-      ],
-      liveVersion: "https://dogs-snowy-iota.vercel.app/",
-    },
-    {
-      id: 2,
       src: "/tech.png",
       name: "The TechHub",
       description:
@@ -39,13 +26,15 @@ const projetos = {
         <JqueryICO key={JqueryICO} />,
       ],
       liveVersion: "https://thetechhub.com.br/",
+      dateCreation: '2021',
+      status: true
     },
     {
-      id: 3,
+      id: 2,
       src: "/Inspired.jpeg",
       name: "Inspired",
       description:
-        "E-commerce como projeto de estudo como forma de aprimorar as minhas habilidades.",
+        "E-commerce feito como projeto de estudo com foco em aprimorar as minhas habilidades.",
       technologies: [
         <VuelICO key={VuelICO} />,
         <NodeICO key={NodeICO} />,
@@ -55,6 +44,39 @@ const projetos = {
         <PrismaICO key={PrismaICO} />,
       ],
       liveVersion: "https://github.com/Raphaeljsx/inspired",
+      dateCreation: '2023',
+      status: true
+    },
+    {
+      id: 3,
+      src: "/log.jpg",
+      name: "Dogs - Uma Rede Social",
+      description:
+        "Desenvolvi uma rede social para cachorros no curso de React que fiz no site da Origamid.",
+      technologies: [
+        <ReactICO key={ReactICO} />,
+        <LogoJavascriptICO key={LogoJavascriptICO} />,
+        <NodeICO key={NodeICO} />,
+      ],
+      liveVersion: "https://dogs-snowy-iota.vercel.app/",
+      dateCreation: '2024',
+      status: true
+    },
+   
+   
+    {
+      id: 4,
+      src: "/moneytech.png",
+      name: "Money Tech",
+      description:
+        "Aplicação feita para simular um Dashboard com consumo de Api Rest (React e Typescript).",
+      technologies: [
+        <ReactICO key={ReactICO} />,
+        <TypescriptICO key={TypescriptICO} />,
+      ],
+      liveVersion: "https://money-tech.vercel.app/",
+      dateCreation: '2024',
+      status: false
     },
   ],
 };
@@ -80,6 +102,7 @@ const ProjectsGrid = () => {
          
           <h3 className="tracking-tight text-lg font-bold">{projeto.name}</h3>
           <p className="text-sm dark:text-gray-400 mb-5">{projeto.description}</p>
+          <span className="text-sm dark:text-gray-400 mb-5">{projeto.dateCreation}</span>
     
           <div className="flex flex-col-reverse md:flex-row md:justify-between   items-center mt-4">
             <a
@@ -88,14 +111,30 @@ const ProjectsGrid = () => {
               rel="noopener noreferrer"
               className=" self-start mt-5 md:mt-0"
             >
-              <button
+
+            {projeto .status ? <button
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium 
                 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 
                 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground 
                 hover:bg-primary/90 h-10 px-4 py-2 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               >
-                Ver projeto
+               
+                Ver Projeto
+              </button> :  
+              
+              <button
+              disabled
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium 
+                ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 
+                focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gray-600 text-primary-foreground 
+                hover:bg-primary/90 h-10 px-4 py-2 lg:opacity-0 "
+              >
+               
+               Em desenvolvimento
               </button>
+              
+              }
+              
             </a>
             <div className="flex self-start md:self-center space-x-2 text-2xl">
             {projeto.technologies}
