@@ -9,6 +9,9 @@ import {
   MysqlICO,
   TypescriptICO,
   PrismaICO,
+  PhpICO,
+  TailwindICO,
+  JavascriptICO,
 } from "../Helpers/Icons";
 import { SiExpress } from "react-icons/si";
 
@@ -62,8 +65,6 @@ const projetos = {
       dateCreation: '2024',
       status: true
     },
-   
-   
     {
       id: 4,
       src: "/moneytech.png",
@@ -78,6 +79,56 @@ const projetos = {
       dateCreation: '2024',
       status: false
     },
+    {
+      id: 5,
+      src:"/instituto.png",
+      name: "Instituto Calmont",
+      description:
+      "Site criado para o Instituto Calmont, com o objetivo de divulgar serviços e profissionais. Além de captar novos clientes e disponibilizar informações de saúde na área de blog.",
+      liveVersion: "https://institutocalmont.com.br/",
+      technologies: [
+        <WordpressICO key={WordpressICO} />,
+        <PhpICO key={PhpICO} />,
+        <TailwindICO key={TailwindICO} />,
+        <JqueryICO key={JqueryICO} />,
+        <JavascriptICO key={JavascriptICO} />,
+      ],
+      dateCreation: '2024',
+      status: true
+    },
+    {
+      id: 6,
+      src: "/trevisolucoes.png",
+      description:
+      "Site criado para a empresa Trevisoluções, com o objetivo de divulgar serviços e profissionais. Além de captar novos clientes.",
+      liveVersion: "https://trevisolucoeslean.com.br/",
+      technologies: [
+        <WordpressICO key={WordpressICO} />,
+        <PhpICO key={PhpICO} />,
+        <TailwindICO key={TailwindICO} />,
+        <JqueryICO key={JqueryICO} />,
+        <JavascriptICO key={JavascriptICO} />,
+      ],
+      dateCreation: '2024',
+      status: true
+    },
+    {
+      id: 7,
+      src: "/storaze.png",
+      name: "Storaze",
+      description:
+      "Site criado para a empresa Storaze, com o objetivo de divulgar serviços e profissionais. Além de captar novos clientes e disponibilizar informações sobre os serviços prestados.",
+      liveVersion: "https://storaze.com.br/",
+      technologies: [
+        <ReactICO key={ReactICO} />,
+        <TailwindICO key={TailwindICO} />,
+        <JavascriptICO key={JavascriptICO} />,
+        <WordpressICO key={WordpressICO} />,
+        <PhpICO key={PhpICO} />,
+      ],
+      dateCreation: '2024',
+      status: true
+    }
   ],
 };
 
